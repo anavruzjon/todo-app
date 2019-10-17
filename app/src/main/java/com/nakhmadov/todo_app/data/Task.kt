@@ -18,5 +18,5 @@ data class Task(
     var description: String = "",
 
     @ColumnInfo(name = "completed")
-    var isCompeted: Boolean = false
+    var isCompleted: Boolean = false
 )

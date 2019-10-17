@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">todo-app</string>
+    <string name="no_tasks">No tasks in this list</string>
+    <string name="add_task">Add task</string>
+    <string name="all_tasks">All tasks</string>
+    <string name="active_tasks">Active tasks</string>
+    <string name="completed_tasks">Completed tasks</string>
+    <string name="navigation_view_header_title">TODO APP</string>
+    <string name="list_title">TODO List</string>
+    <string name="statistics_title">Statistics</string>
+    <string name="menu_filter">Filter</string>
+    <string name="menu_clear">Delete completed</string>
+    <string name="refresh">Refresh</string>
+    <string name="menu_delete_task">Delete task</string>
+    <string name="tasks_deleted">tasks deleted</string>
+    <string name="on_delete_completed_cancel">Undo</string>
+    <string name="nav_all">All</string>
+    <string name="nav_active">Active</string>
+    <string name="nav_completed">Completed</string>
+    <string name="task_is_not_completed">Task is not completed</string>
+    <string name="task_is_completed">Task is completed</string>
 </resources>
