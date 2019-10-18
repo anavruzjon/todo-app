@@ -1,6 +1,7 @@
 package com.nakhmadov.todo_app.data.db
 
 import android.app.Application
+import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -13,11 +14,11 @@ abstract class TasksDatabase : RoomDatabase() {
 
 private lateinit var INSTANCE: TasksDatabase
 
-fun getDatabase(application: Application): TasksDatabase {
+fun getDatabase(context: Context): TasksDatabase {
     synchronized(TasksDatabase::class.java) {
         if (!::INSTANCE.isInitialized) {
             INSTANCE = Room.databaseBuilder(
-                application.applicationContext,
+                context.applicationContext,
                 TasksDatabase::class.java,
                 "tasksDB"
             ).build()
