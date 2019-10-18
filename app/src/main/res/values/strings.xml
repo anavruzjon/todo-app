@@ -20,4 +20,5 @@
     <string name="task_is_not_completed">Task is not completed</string>
     <string name="task_is_completed">Task is completed</string>
     <string name="tasks_fragment_action_bar_title">TODO List</string>
+    <string name="task_deleted">Task was deleted</string>
 </resources>
