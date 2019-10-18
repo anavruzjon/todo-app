@@ -56,6 +56,14 @@ class TasksRepository(private val database: TasksDatabase) {
         database.tasksDao.insertListTask(list)
     }
 
+    suspend fun getAllCount(): Long = withContext(Dispatchers.IO) {
+        database.tasksDao.getAllCount()
+    }
+
+    suspend fun getActiveCount(): Long = withContext(Dispatchers.IO) {
+        database.tasksDao.getActiveCount()
+    }
+
     suspend fun getCompletedCount(): Long = withContext(Dispatchers.IO) {
         database.tasksDao.getCompletedCount()
     }
