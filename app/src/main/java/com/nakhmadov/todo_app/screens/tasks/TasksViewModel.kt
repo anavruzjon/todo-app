@@ -19,7 +19,7 @@ class TasksViewModel(application: Application) : AndroidViewModel(application) {
     private val viewModelJob = Job()
     private val uiScope = CoroutineScope(viewModelJob + Dispatchers.Main)
 
-    private val database = getDatabase(application)
+    private val database = getDatabase(application.applicationContext)
     private val repository = TasksRepository.getInstance(database = database)
 
     private val context = application.applicationContext
