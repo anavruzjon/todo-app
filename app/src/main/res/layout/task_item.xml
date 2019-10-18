@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="task"
+            type="com.nakhmadov.todo_app.data.Task" />
+
+        <variable
+            name="listener"
+            type="com.nakhmadov.todo_app.screens.tasks.TaskListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{()->listener.onTaskClick(task)}"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/is_completed_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> listener.onCheckChange(task)}"
+            app:isCompleted="@{task}" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginStart="@dimen/small_spacing"
+            android:textColor="@color/textGrayColor"
+            android:textSize="18sp"
+            app:setTitleTask="@{task}"
+            tools:text="Title of todo" />
+
+    </LinearLayout>
+</layout>
