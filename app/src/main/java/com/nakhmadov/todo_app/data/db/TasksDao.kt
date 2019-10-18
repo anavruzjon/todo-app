@@ -37,9 +37,18 @@ interface TasksDao {
     @Insert
     fun insertListTask(list: List<Task>)
 
+    @Query("select count(id) from tasks_table")
+    fun getAllCount(): Long
+
     @Query("select count(id) from tasks_table where completed = 1")
     fun getCompletedCount(): Long
 
+    @Query("select count(id) from tasks_table where completed = 0")
+    fun getActiveCount(): Long
+
+
     @Update
     fun update(task: Task)
+
+
 }
