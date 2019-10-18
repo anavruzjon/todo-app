@@ -23,4 +23,7 @@
     <string name="task_deleted">Task was deleted</string>
     <string name="title_hint">Title</string>
     <string name="description_hint">Description</string>
+    <string name="task_not_saved">Task was not saved</string>
+    <string name="task_saved">Task was saved</string>
+    <string name="new_task">New task</string>
 </resources>
