@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 
@@ -50,6 +51,14 @@ class AddEditTaskFragment : Fragment() {
         if (taskId > 0) {
             binding.descriptionEditText.setText(task.description)
             binding.titleEditText.setText(task.title)
+
+            if (!task.title.isNullOrEmpty()) {
+                (activity as AppCompatActivity).supportActionBar?.title = task.title
+            } else {
+                (activity as AppCompatActivity).supportActionBar?.title = task.description
+            }
+        } else {
+            (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.new_task)
         }
         binding.doneButton.setOnClickListener {
             viewModel.saveToDatabase()
