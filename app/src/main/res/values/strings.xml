@@ -26,4 +26,7 @@
     <string name="task_not_saved">Task was not saved</string>
     <string name="task_saved">Task was saved</string>
     <string name="new_task">New task</string>
+    <string name="Defis">-</string>
+    <string name="hundred_percent">100.0%</string>
+    <string name="statistics_fragment_title">Statistics</string>
 </resources>
