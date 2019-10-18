@@ -6,6 +6,7 @@ import android.view.*
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.PopupMenu
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -39,6 +40,8 @@ class TasksFragment : Fragment() {
         binding.lifecycleOwner = this
 
         setupRecycler()
+
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.tasks_fragment_action_bar_title)
 
         viewModel.eventStatusChange.observe(this, Observer {
             it?.let {
