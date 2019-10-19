@@ -8,29 +8,37 @@
     <fragment
         android:id="@+id/tasksFragment"
         android:name="com.nakhmadov.todo_app.screens.tasks.TasksFragment"
-        android:label="TasksFragment" >
+        android:label="TasksFragment">
         <action
             android:id="@+id/action_tasksFragment_to_addEditTaskFragment"
-            app:destination="@id/addEditTaskFragment" />
+            app:destination="@id/addEditTaskFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:popEnterAnim="@anim/slide_in_right" />
         <action
             android:id="@+id/action_tasksFragment_to_taskDetailFragment"
-            app:destination="@id/taskDetailFragment" />
+            app:destination="@id/taskDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_right" />
     </fragment>
     <fragment
         android:id="@+id/taskDetailFragment"
         android:name="com.nakhmadov.todo_app.screens.task_detail.TaskDetailFragment"
         android:label="task_detail_fragment"
-        tools:layout="@layout/task_detail_fragment" >
+        tools:layout="@layout/task_detail_fragment">
         <argument
             android:name="taskId"
             app:argType="long" />
         <action
             android:id="@+id/action_taskDetailFragment_to_addEditTaskFragment"
             app:destination="@id/addEditTaskFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_right"
             app:popUpTo="@+id/tasksFragment" />
         <action
             android:id="@+id/action_taskDetailFragment_to_tasksFragment"
             app:destination="@id/tasksFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:popEnterAnim="@anim/slide_in_right"
             app:popUpTo="@+id/tasksFragment" />
     </fragment>
     <fragment
@@ -42,14 +50,16 @@
         android:id="@+id/addEditTaskFragment"
         android:name="com.nakhmadov.todo_app.screens.add_edit_task.AddEditTaskFragment"
         android:label="add_edit_task_fragment"
-        tools:layout="@layout/add_edit_task_fragment" >
+        tools:layout="@layout/add_edit_task_fragment">
         <argument
             android:name="taskId"
-            app:argType="long"
-            android:defaultValue="-1L" />
+            android:defaultValue="-1L"
+            app:argType="long" />
         <action
             android:id="@+id/action_addEditTaskFragment_to_tasksFragment"
             app:destination="@id/tasksFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_right"
             app:popUpTo="@+id/tasksFragment" />
     </fragment>
 </navigation>
