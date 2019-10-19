@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/normal_spacing"
-            android:text="@string/all_tasks"
+            android:text="@string/all_stat"
             android:textColor="@color/textGrayColor"
             android:textSize="22sp"
             app:layout_constraintEnd_toStartOf="@+id/all"
