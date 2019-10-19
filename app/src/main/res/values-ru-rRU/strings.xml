@@ -30,4 +30,5 @@
     <string name="tasks_deleted">удалено</string>
     <string name="tasks_fragment_action_bar_title">Список</string>
     <string name="title_hint">Название</string>
+    <string name="all_stat">Всего</string>
 </resources>
