@@ -1,2 +1,15 @@
 # todo-app
-TODO Application. The application is build on MVVM pattern. For navigation it uses Navigation Component, for database - Room.
+TODO Application. The Simple application for managing todo tasks.
+
+## Stack
+- MVVM
+- Android Jetpack
+- Room database
+
+## Features
+- Multi language support
+- Add, Edit, Delete tasks
+- Cancel deleting
+- Tasks stats
+
+## Screenshots
