@@ -12,5 +12,5 @@ TODO Application. The Simple application for managing todo tasks.
 - Cancel deleting
 - Tasks stats
 
-## Screenshots
+## Screencast
 ![Farmers Market Finder Demo](screencast_gif.gif)
