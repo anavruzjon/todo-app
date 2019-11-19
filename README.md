@@ -2,10 +2,10 @@
 TODO Application. The Simple application for managing todo tasks.
 
 ## Stack
-- MVVM
-- Android Jetpack
-- Room database
+- Kotlin
 - Kotlin coroutines
+- MVVM
+- Android Jetpack (Room, Data binding, LiveData, Navigation, ViewModel)
 
 ## Features
 - Multi language support
